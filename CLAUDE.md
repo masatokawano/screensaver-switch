@@ -4,7 +4,7 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## Repository Overview
 
-ScreensaverSwitch - macOSのスクリーンセーバー待機時間（1分/30分）をワンクリックで切り替えるメニューバー常駐アプリ。
+ScreensaverSwitch - macOSのスクリーンセーバー待機時間をワンクリックで切り替えるメニューバー常駐アプリ。1分/30分のプリセット切り替えに加え、任意の時間（分単位）も設定可能。
 
 ## 技術スタック
 

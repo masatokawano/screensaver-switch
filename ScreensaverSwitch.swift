@@ -17,6 +17,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         menu = NSMenu()
         menu.addItem(NSMenuItem(title: "1分に設定", action: #selector(setShort), keyEquivalent: "1"))
         menu.addItem(NSMenuItem(title: "30分に設定", action: #selector(setLong), keyEquivalent: "3"))
+        menu.addItem(NSMenuItem(title: "カスタム設定...", action: #selector(setCustom), keyEquivalent: "c"))
         menu.addItem(NSMenuItem.separator())
         menu.addItem(NSMenuItem(title: "終了", action: #selector(quit), keyEquivalent: "q"))
 
@@ -79,6 +80,27 @@ class AppDelegate: NSObject, NSApplicationDelegate {
 
     @objc func setLong() {
         setIdleTime(longTime)
+    }
+
+    @objc func setCustom() {
+        let alert = NSAlert()
+        alert.messageText = "スクリーンセーバー待機時間"
+        alert.informativeText = "分単位で入力してください:"
+        alert.addButton(withTitle: "設定")
+        alert.addButton(withTitle: "キャンセル")
+
+        let input = NSTextField(frame: NSRect(x: 0, y: 0, width: 100, height: 24))
+        input.stringValue = String(getCurrentIdleTime() / 60)
+        alert.accessoryView = input
+
+        NSApp.activate(ignoringOtherApps: true)
+        let response = alert.runModal()
+
+        if response == .alertFirstButtonReturn {
+            if let minutes = Int(input.stringValue), minutes > 0 {
+                setIdleTime(minutes * 60)
+            }
+        }
     }
 
     @objc func quit() {

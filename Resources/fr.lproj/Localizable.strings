@@ -1,5 +1,4 @@
-"menu.set1min" = "Régler sur 1 min";
-"menu.set30min" = "Régler sur 30 min";
+"menu.setMinutes" = "Régler sur %d min";
 "menu.custom" = "Personnaliser...";
 "menu.quit" = "Quitter";
 

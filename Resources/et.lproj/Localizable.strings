@@ -1,5 +1,4 @@
-"menu.set1min" = "Määra 1 minutile";
-"menu.set30min" = "Määra 30 minutile";
+"menu.setMinutes" = "Määra %d minutile";
 "menu.custom" = "Kohandatud...";
 "menu.quit" = "Välju";
 

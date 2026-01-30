@@ -1,5 +1,4 @@
-"menu.set1min" = "1分に設定";
-"menu.set30min" = "30分に設定";
+"menu.setMinutes" = "%d分に設定";
 "menu.custom" = "カスタム設定...";
 "menu.quit" = "終了";
 

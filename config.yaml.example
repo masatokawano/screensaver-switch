@@ -1,0 +1,14 @@
+# ScreensaverSwitch Configuration
+# Copy this file to ~/.config/screensaver-switch/config.yaml
+
+# Preset times (in minutes)
+# These will appear as menu items
+presets:
+  - 1
+  - 5
+  - 15
+  - 30
+
+# Threshold for "short" icon (⏱️ vs 💤)
+# If current setting <= this value, show ⏱️
+short_threshold: 5

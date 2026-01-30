@@ -1,5 +1,4 @@
-"menu.set1min" = "Встановити 1 хв";
-"menu.set30min" = "Встановити 30 хв";
+"menu.setMinutes" = "Встановити %d хв";
 "menu.custom" = "Налаштувати...";
 "menu.quit" = "Вийти";
 

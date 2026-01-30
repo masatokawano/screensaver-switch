@@ -7,10 +7,11 @@ A macOS menu bar app to quickly switch screensaver idle time with one click.
 ## Features
 
 - Stays in the menu bar, displaying current setting with an icon
-  - `⏱️` : Set to 1 minute (short)
-  - `💤` : Set to 30 minutes (long)
-- Click to open menu and easily switch between 1 min / 30 min
+  - `⏱️` : Short time setting
+  - `💤` : Long time setting
+- Click to open menu and quickly switch between preset times
 - Custom setting allows any time (in minutes)
+- Configurable presets via YAML file
 - Multi-language support (10 languages)
 
 ## Requirements
@@ -44,6 +45,25 @@ open ScreensaverSwitch.app
 
 Add `ScreensaverSwitch.app` to `System Settings > General > Login Items`.
 
+## Configuration
+
+Create `~/.config/screensaver-switch/config.yaml` to customize presets:
+
+```yaml
+# Preset times (in minutes)
+presets:
+  - 1
+  - 5
+  - 15
+  - 30
+
+# Threshold for "short" icon (⏱️ vs 💤)
+# If current setting <= this value, show ⏱️
+short_threshold: 5
+```
+
+See `config.yaml.example` for a complete example.
+
 ## Supported Languages
 
 The app automatically switches based on your system language settings.
@@ -75,6 +95,7 @@ screensaver-switch/
 │   ├── en.lproj/
 │   ├── ja.lproj/
 │   └── ...
+├── config.yaml.example        # Example configuration file
 ├── build.sh                   # Build script
 └── README.md                  # This file
 ```

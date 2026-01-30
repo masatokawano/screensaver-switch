@@ -1,0 +1,14 @@
+# Build artifacts
+ScreensaverSwitch.app/
+
+# macOS system files
+.DS_Store
+*.swp
+*~
+
+# Xcode (if used in future)
+*.xcodeproj/
+*.xcworkspace/
+xcuserdata/
+DerivedData/
+build/

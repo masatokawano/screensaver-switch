@@ -1,0 +1,11 @@
+"menu.set1min" = "1분으로 설정";
+"menu.set30min" = "30분으로 설정";
+"menu.custom" = "사용자 지정...";
+"menu.quit" = "종료";
+
+"dialog.title" = "화면 보호기 대기 시간";
+"dialog.message" = "분 단위로 입력하세요:";
+"dialog.ok" = "설정";
+"dialog.cancel" = "취소";
+
+"tooltip.format" = "화면 보호기: %d분";

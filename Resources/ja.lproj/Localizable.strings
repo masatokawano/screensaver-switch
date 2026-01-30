@@ -1,0 +1,11 @@
+"menu.set1min" = "1分に設定";
+"menu.set30min" = "30分に設定";
+"menu.custom" = "カスタム設定...";
+"menu.quit" = "終了";
+
+"dialog.title" = "スクリーンセーバー待機時間";
+"dialog.message" = "分単位で入力してください:";
+"dialog.ok" = "設定";
+"dialog.cancel" = "キャンセル";
+
+"tooltip.format" = "スクリーンセーバー: %d分";

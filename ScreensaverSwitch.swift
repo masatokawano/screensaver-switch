@@ -1,25 +1,29 @@
 import Cocoa
 
+func L(_ key: String) -> String {
+    return Bundle.main.localizedString(forKey: key, value: key, table: nil)
+}
+
 class AppDelegate: NSObject, NSApplicationDelegate {
     var statusItem: NSStatusItem!
     var menu: NSMenu!
 
-    let shortTime = 60      // 1分
-    let longTime = 1800     // 30分
+    let shortTime = 60      // 1 min
+    let longTime = 1800     // 30 min
 
     func applicationDidFinishLaunching(_ notification: Notification) {
         statusItem = NSStatusBar.system.statusItem(withLength: NSStatusItem.variableLength)
 
-        if let button = statusItem.button {
+        if statusItem.button != nil {
             updateIcon()
         }
 
         menu = NSMenu()
-        menu.addItem(NSMenuItem(title: "1分に設定", action: #selector(setShort), keyEquivalent: "1"))
-        menu.addItem(NSMenuItem(title: "30分に設定", action: #selector(setLong), keyEquivalent: "3"))
-        menu.addItem(NSMenuItem(title: "カスタム設定...", action: #selector(setCustom), keyEquivalent: "c"))
+        menu.addItem(NSMenuItem(title: L("menu.set1min"), action: #selector(setShort), keyEquivalent: "1"))
+        menu.addItem(NSMenuItem(title: L("menu.set30min"), action: #selector(setLong), keyEquivalent: "3"))
+        menu.addItem(NSMenuItem(title: L("menu.custom"), action: #selector(setCustom), keyEquivalent: "c"))
         menu.addItem(NSMenuItem.separator())
-        menu.addItem(NSMenuItem(title: "終了", action: #selector(quit), keyEquivalent: "q"))
+        menu.addItem(NSMenuItem(title: L("menu.quit"), action: #selector(quit), keyEquivalent: "q"))
 
         statusItem.menu = menu
     }
@@ -68,9 +72,9 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         let isShort = currentTime <= shortTime
 
         if let button = statusItem.button {
-            // 1分の時は時計アイコン、30分の時はスリープアイコン
             button.title = isShort ? "⏱️" : "💤"
-            button.toolTip = "スクリーンセーバー: \(currentTime / 60)分"
+            let format = L("tooltip.format")
+            button.toolTip = String(format: format, currentTime / 60)
         }
     }
 
@@ -84,10 +88,10 @@ class AppDelegate: NSObject, NSApplicationDelegate {
 
     @objc func setCustom() {
         let alert = NSAlert()
-        alert.messageText = "スクリーンセーバー待機時間"
-        alert.informativeText = "分単位で入力してください:"
-        alert.addButton(withTitle: "設定")
-        alert.addButton(withTitle: "キャンセル")
+        alert.messageText = L("dialog.title")
+        alert.informativeText = L("dialog.message")
+        alert.addButton(withTitle: L("dialog.ok"))
+        alert.addButton(withTitle: L("dialog.cancel"))
 
         let input = NSTextField(frame: NSRect(x: 0, y: 0, width: 100, height: 24))
         input.stringValue = String(getCurrentIdleTime() / 60)

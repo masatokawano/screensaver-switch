@@ -1,0 +1,11 @@
+"menu.set1min" = "Auf 1 Min. einstellen";
+"menu.set30min" = "Auf 30 Min. einstellen";
+"menu.custom" = "Benutzerdefiniert...";
+"menu.quit" = "Beenden";
+
+"dialog.title" = "Bildschirmschoner-Wartezeit";
+"dialog.message" = "Zeit in Minuten eingeben:";
+"dialog.ok" = "Einstellen";
+"dialog.cancel" = "Abbrechen";
+
+"tooltip.format" = "Bildschirmschoner: %d Min.";

@@ -32,6 +32,7 @@ open ScreensaverSwitch.app
 
 - `ScreensaverSwitch.swift` - メインソースコード（NSStatusItemを使用したメニューバーアプリ）
 - `ScreensaverSwitch.app/` - ビルド済みアプリバンドル
+- `Resources/` - ローカライズファイル（10言語対応）
 - `build.sh` - ビルドスクリプト
 - `README.md` - プロジェクトドキュメント
 

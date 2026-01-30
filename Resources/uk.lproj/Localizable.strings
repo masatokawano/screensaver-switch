@@ -1,0 +1,11 @@
+"menu.set1min" = "Встановити 1 хв";
+"menu.set30min" = "Встановити 30 хв";
+"menu.custom" = "Налаштувати...";
+"menu.quit" = "Вийти";
+
+"dialog.title" = "Час очікування заставки";
+"dialog.message" = "Введіть час у хвилинах:";
+"dialog.ok" = "Встановити";
+"dialog.cancel" = "Скасувати";
+
+"tooltip.format" = "Заставка: %d хв";

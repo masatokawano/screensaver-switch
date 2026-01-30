@@ -1,0 +1,11 @@
+"menu.set1min" = "設定為1分鐘";
+"menu.set30min" = "設定為30分鐘";
+"menu.custom" = "自訂...";
+"menu.quit" = "結束";
+
+"dialog.title" = "螢幕保護程式等待時間";
+"dialog.message" = "請輸入分鐘數:";
+"dialog.ok" = "設定";
+"dialog.cancel" = "取消";
+
+"tooltip.format" = "螢幕保護: %d分鐘";

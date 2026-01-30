@@ -1,0 +1,11 @@
+"menu.set1min" = "Set to 1 min";
+"menu.set30min" = "Set to 30 min";
+"menu.custom" = "Custom...";
+"menu.quit" = "Quit";
+
+"dialog.title" = "Screensaver Idle Time";
+"dialog.message" = "Enter time in minutes:";
+"dialog.ok" = "Set";
+"dialog.cancel" = "Cancel";
+
+"tooltip.format" = "Screensaver: %d min";

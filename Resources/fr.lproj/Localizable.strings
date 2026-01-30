@@ -1,0 +1,11 @@
+"menu.set1min" = "Régler sur 1 min";
+"menu.set30min" = "Régler sur 30 min";
+"menu.custom" = "Personnaliser...";
+"menu.quit" = "Quitter";
+
+"dialog.title" = "Délai de l'économiseur d'écran";
+"dialog.message" = "Entrez le temps en minutes :";
+"dialog.ok" = "Régler";
+"dialog.cancel" = "Annuler";
+
+"tooltip.format" = "Économiseur d'écran : %d min";

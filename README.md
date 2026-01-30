@@ -9,6 +9,7 @@ macOSのスクリーンセーバー待機時間をワンクリックで切り替
   - `💤` : 30分（長時間）に設定中
 - クリックでメニューを開き、1分/30分を簡単に切り替え
 - カスタム設定で任意の時間（分単位）を指定可能
+- 多言語対応（10言語）
 
 ## 必要環境
 
@@ -41,6 +42,21 @@ open ScreensaverSwitch.app
 
 `システム設定 > 一般 > ログイン項目` に `ScreensaverSwitch.app` を追加してください。
 
+## 対応言語
+
+システムの言語設定に応じて自動的に切り替わります。
+
+- English
+- 日本語
+- 中文（简体）
+- 中文（繁體）
+- 한국어
+- Deutsch
+- Français
+- Español
+- Eesti
+- Українська
+
 ## ファイル構成
 
 ```
@@ -49,8 +65,14 @@ screensaver-switch/
 ├── ScreensaverSwitch.app/     # ビルド済みアプリバンドル
 │   └── Contents/
 │       ├── Info.plist         # アプリ設定
-│       └── MacOS/
-│           └── ScreensaverSwitch  # 実行ファイル
+│       ├── MacOS/
+│       │   └── ScreensaverSwitch  # 実行ファイル
+│       └── Resources/         # ローカライズリソース
+│           └── *.lproj/
+├── Resources/                 # ソースローカライズファイル
+│   ├── en.lproj/
+│   ├── ja.lproj/
+│   └── ...
 ├── build.sh                   # ビルドスクリプト
 └── README.md                  # このファイル
 ```

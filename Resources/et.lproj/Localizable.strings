@@ -1,0 +1,11 @@
+"menu.set1min" = "Määra 1 minutile";
+"menu.set30min" = "Määra 30 minutile";
+"menu.custom" = "Kohandatud...";
+"menu.quit" = "Välju";
+
+"dialog.title" = "Ekraanisäästja ooteaeg";
+"dialog.message" = "Sisestage aeg minutites:";
+"dialog.ok" = "Määra";
+"dialog.cancel" = "Tühista";
+
+"tooltip.format" = "Ekraanisäästja: %d min";

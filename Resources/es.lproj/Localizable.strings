@@ -1,0 +1,11 @@
+"menu.set1min" = "Establecer en 1 min";
+"menu.set30min" = "Establecer en 30 min";
+"menu.custom" = "Personalizar...";
+"menu.quit" = "Salir";
+
+"dialog.title" = "Tiempo de espera del protector de pantalla";
+"dialog.message" = "Ingrese el tiempo en minutos:";
+"dialog.ok" = "Establecer";
+"dialog.cancel" = "Cancelar";
+
+"tooltip.format" = "Protector de pantalla: %d min";

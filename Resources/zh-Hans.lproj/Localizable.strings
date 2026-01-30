@@ -1,0 +1,11 @@
+"menu.set1min" = "设置为1分钟";
+"menu.set30min" = "设置为30分钟";
+"menu.custom" = "自定义...";
+"menu.quit" = "退出";
+
+"dialog.title" = "屏幕保护程序等待时间";
+"dialog.message" = "请输入分钟数:";
+"dialog.ok" = "设置";
+"dialog.cancel" = "取消";
+
+"tooltip.format" = "屏幕保护: %d分钟";

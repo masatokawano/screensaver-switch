@@ -1,50 +1,52 @@
 # ScreensaverSwitch
 
-macOSのスクリーンセーバー待機時間をワンクリックで切り替えるメニューバーアプリです。
+A macOS menu bar app to quickly switch screensaver idle time with one click.
 
-## 機能
+[日本語](README.ja.md)
 
-- メニューバーに常駐し、現在の設定をアイコンで表示
-  - `⏱️` : 1分（短時間）に設定中
-  - `💤` : 30分（長時間）に設定中
-- クリックでメニューを開き、1分/30分を簡単に切り替え
-- カスタム設定で任意の時間（分単位）を指定可能
-- 多言語対応（10言語）
+## Features
 
-## 必要環境
+- Stays in the menu bar, displaying current setting with an icon
+  - `⏱️` : Set to 1 minute (short)
+  - `💤` : Set to 30 minutes (long)
+- Click to open menu and easily switch between 1 min / 30 min
+- Custom setting allows any time (in minutes)
+- Multi-language support (10 languages)
 
-- macOS 10.15 (Catalina) 以降
-- Swift（再ビルドする場合）
+## Requirements
 
-## インストール
+- macOS 10.15 (Catalina) or later
+- Swift (for building from source)
 
-### ビルド済みアプリを使用
+## Installation
+
+### Using pre-built app
 
 ```bash
 open ScreensaverSwitch.app
 ```
 
-### ソースからビルド
+### Build from source
 
 ```bash
 ./build.sh
 open ScreensaverSwitch.app
 ```
 
-## 使い方
+## Usage
 
-1. アプリを起動するとメニューバーにアイコンが表示されます
-2. アイコンをクリックしてメニューを開きます
-3. 「1分に設定」「30分に設定」または「カスタム設定...」を選択します
-   - カスタム設定では任意の分数をダイアログで入力できます
+1. Launch the app and an icon will appear in the menu bar
+2. Click the icon to open the menu
+3. Select "Set to 1 min", "Set to 30 min", or "Custom..."
+   - Custom setting allows entering any number of minutes in a dialog
 
-### ログイン時に自動起動
+### Launch at Login
 
-`システム設定 > 一般 > ログイン項目` に `ScreensaverSwitch.app` を追加してください。
+Add `ScreensaverSwitch.app` to `System Settings > General > Login Items`.
 
-## 対応言語
+## Supported Languages
 
-システムの言語設定に応じて自動的に切り替わります。
+The app automatically switches based on your system language settings.
 
 - English
 - 日本語
@@ -57,50 +59,50 @@ open ScreensaverSwitch.app
 - Eesti
 - Українська
 
-## ファイル構成
+## File Structure
 
 ```
 screensaver-switch/
-├── ScreensaverSwitch.swift    # メインソースコード
-├── ScreensaverSwitch.app/     # ビルド済みアプリバンドル
+├── ScreensaverSwitch.swift    # Main source code
+├── ScreensaverSwitch.app/     # Built app bundle
 │   └── Contents/
-│       ├── Info.plist         # アプリ設定
+│       ├── Info.plist         # App configuration
 │       ├── MacOS/
-│       │   └── ScreensaverSwitch  # 実行ファイル
-│       └── Resources/         # ローカライズリソース
+│       │   └── ScreensaverSwitch  # Executable
+│       └── Resources/         # Localization resources
 │           └── *.lproj/
-├── Resources/                 # ソースローカライズファイル
+├── Resources/                 # Source localization files
 │   ├── en.lproj/
 │   ├── ja.lproj/
 │   └── ...
-├── build.sh                   # ビルドスクリプト
-└── README.md                  # このファイル
+├── build.sh                   # Build script
+└── README.md                  # This file
 ```
 
-## 技術詳細
+## Technical Details
 
-### 使用技術
+### Technologies Used
 
-- **言語**: Swift
-- **フレームワーク**: Cocoa (AppKit)
-- **アーキテクチャ**: NSStatusItem を使用したメニューバーアプリ
+- **Language**: Swift
+- **Framework**: Cocoa (AppKit)
+- **Architecture**: Menu bar app using NSStatusItem
 
-### スクリーンセーバー設定の変更方法
+### How Screensaver Settings Are Changed
 
-macOSの `defaults` コマンドを使用してスクリーンセーバーの待機時間を変更しています：
+Uses the macOS `defaults` command to modify screensaver idle time:
 
 ```bash
-# 読み取り
+# Read
 defaults -currentHost read com.apple.screensaver idleTime
 
-# 書き込み（例: 60秒に設定）
+# Write (e.g., set to 60 seconds)
 defaults -currentHost write com.apple.screensaver idleTime -int 60
 ```
 
 ### LSUIElement
 
-`Info.plist` で `LSUIElement` を `true` に設定することで、Dockにアイコンを表示せずメニューバーのみに常駐するアプリとして動作します。
+Setting `LSUIElement` to `true` in `Info.plist` makes the app run as a menu bar-only app without showing a Dock icon.
 
-## ライセンス
+## License
 
 MIT License
